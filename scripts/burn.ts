@@ -13,7 +13,7 @@ export async function rateOwnerChange() {
     from: deployer,
   });
 
-  console.log("Balance: before transfer " + balanceBefore);
+  console.log("Balance: before burn " + balanceBefore);
 
   const transferTx = await _contract.burn(amount, {
     from: deployer,
@@ -23,7 +23,7 @@ export async function rateOwnerChange() {
     from: deployer,
   });
 
-  console.log("Balance: after transfer " + balanceAfter);
+  console.log("Balance: after burn " + balanceAfter);
 }
 
 rateOwnerChange()

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ethParth/module_4#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.3.1",
     "hardhat": "^2.19.1"
   },
   "dependencies": {

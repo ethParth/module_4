@@ -1,9 +1,12 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import * as dotenv from "dotenv";
 
 const FORK_FUJI = false;
 const FORK_MAINNET = false;
 let forkingData = undefined;
+
+dotenv.config();
 
 if (FORK_MAINNET) {
   forkingData = {
@@ -15,6 +18,8 @@ if (FORK_FUJI) {
     url: "https://api.avax-test.network/ext/bc/C/rpc",
   };
 }
+
+const _PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -29,17 +34,13 @@ module.exports = {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
       gasPrice: 225000000000,
       chainId: 43113,
-      accounts: [
-        "3ad74149ab6fcb59afeda2555f0750323e09f98c6519ac6c949b1eae1ee78e9d",
-      ],
+      accounts: [_PRIVATE_KEY],
     },
     mainnet: {
       url: "https://api.avax.network/ext/bc/C/rpc",
       gasPrice: 225000000000,
       chainId: 43114,
-      accounts: [
-        "3ad74149ab6fcb59afeda2555f0750323e09f98c6519ac6c949b1eae1ee78e9d",
-      ],
+      accounts: [_PRIVATE_KEY],
     },
   },
   etherscan: {
