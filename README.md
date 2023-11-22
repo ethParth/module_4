@@ -38,7 +38,7 @@ The contract is deployed on the Avalanche Fuji-C chain at the address
 0x17e46765bfcD411f13192AF6602EC7dCE95E1385
 ```
 
-### Authhors
+### Authors
 
 Parth Verma
 
